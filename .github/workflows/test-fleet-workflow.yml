@@ -4,7 +4,7 @@ on: [push]
 jobs:
   Hello-World-Job:
     runs-on:
-      - codebuild-test-project-worflow-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-workflow-test-${{ github.run_id }}-${{ github.run_attempt }}
         fleet:myTestFleet
         image:arm-3.0
     steps:
