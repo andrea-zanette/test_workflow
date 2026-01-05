@@ -2,6 +2,11 @@ name: Test Docker Build Issue
 on: [push]
 
 jobs:
+  Hello-World-Job:
+    runs-on:
+      - codebuild-test_job_summary_workflow_error-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "Hello World"
   test-fleet:
     runs-on:
       - codebuild-test_job_summary_workflow_error-${{ github.run_id }}-${{ github.run_attempt }}
