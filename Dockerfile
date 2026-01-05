@@ -1,3 +1,3 @@
 FROM alpine:latest
-RUN echo "test build"
+RUN echo "test build!"
 CMD ["echo", "hello"]
