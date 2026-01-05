@@ -5,11 +5,13 @@ jobs:
   Hello-World-Job:
     runs-on:
       - codebuild-test_job_summary_workflow_error-${{ github.run_id }}-${{ github.run_attempt }}
+      - fleet:myTestFleet
     steps:
       - run: echo "Hello World"
   test-fleet:
     runs-on:
       - codebuild-test_job_summary_workflow_error-${{ github.run_id }}-${{ github.run_attempt }}
+      - fleet:myTestFleet
     steps:
       - uses: actions/checkout@v4
       
