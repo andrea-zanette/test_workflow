@@ -5,8 +5,8 @@ jobs:
   Test-Fleet-Job:
     runs-on:
       - codebuild-workflow-test-${{ github.run_id }}-${{ github.run_attempt }}
-        fleet:myTestFleetx86
-        image:ubuntu-5.0
+        fleet:myTestFleet
+        image:arm-3.0
     steps:
       - uses: actions/checkout@v4
       
@@ -21,4 +21,5 @@ jobs:
           push: false
           load: true
           tags: test-image:latest
+          platforms: linux/amd64/v4
           provenance: false
