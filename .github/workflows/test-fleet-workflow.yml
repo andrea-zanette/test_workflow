@@ -20,6 +20,4 @@ jobs:
           file: Dockerfile
           push: false
           load: true
-          tags: test-image:latest
-          platforms: linux/amd64
           provenance: false
