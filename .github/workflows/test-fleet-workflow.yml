@@ -4,8 +4,8 @@ on: [push]
 jobs:
   test-fleet:
     runs-on:
-      - codebuild-aws-shr-${{ github.run_id }}-${{ github.run_attempt }}
-      - fleet:bindfleet
+      - codebuild-test_job_summary_workflow_error-${{ github.run_id }}-${{ github.run_attempt }}
+      - fleet:myTestFleet
       - image:arm-3.0
     steps:
       - uses: actions/checkout@v4
