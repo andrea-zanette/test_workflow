@@ -14,8 +14,8 @@ jobs:
 
       - name: Print runner details
         run: |
-          echo "$RUNNER_ARCH"
-          echo "$RUNNER_OS"
+          echo "arch: $RUNNER_ARCH"
+          echo "os: $RUNNER_OS"
 
       - name: Build runtime image
         uses: docker/build-push-action@v6
