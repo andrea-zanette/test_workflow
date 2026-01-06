@@ -12,8 +12,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Print os
-        run: echo " Arch: $RUNNER_ARCH OS: $RUNNER_OS "
+      - name: Print runner details
+        run: |
+          echo "$RUNNER_ARCH"
+          echo "$RUNNER_OS"
 
       - name: Build runtime image
         uses: docker/build-push-action@v6
