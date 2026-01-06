@@ -4,8 +4,8 @@ on: [push]
 jobs:
   Test-Fleet-Job:
     runs-on:
-      - codebuild-workflow-test-ondemand-${{ github.run_id }}-${{ github.run_attempt }}
-        image:arm-3.0
+      - codebuild-workflow-test-${{ github.run_id }}-${{ github.run_attempt }}
+        fleet:myTestFleetx86
     steps:
       - uses: actions/checkout@v4
       
