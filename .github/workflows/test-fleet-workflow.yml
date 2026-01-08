@@ -6,7 +6,7 @@ jobs:
     runs-on:
       - codebuild-workflow-test-${{ github.run_id }}-${{ github.run_attempt }}
         fleet:myTestFleetx86
-        image:linux-5.0
+        image:ubuntu-7.0
     steps:
       - uses: actions/checkout@v4
       
