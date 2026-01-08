@@ -5,17 +5,15 @@ jobs:
   Test-Fleet-Job:
     runs-on:
       - codebuild-workflow-test-${{ github.run_id }}-${{ github.run_attempt }}
-        fleet:myTestFleetx86
+        fleet:myTestFleet
+        image:arm-3.0
     steps:
       - uses: actions/checkout@v4
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
-      - name: Print runner details
-        run: |
-          echo "arch: $RUNNER_ARCH"
-          echo "os: $RUNNER_OS"
+        with: 
+          version: v0.28.0
 
       - name: Build runtime image
         uses: docker/build-push-action@v6
